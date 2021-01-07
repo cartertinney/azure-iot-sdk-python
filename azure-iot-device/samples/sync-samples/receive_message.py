@@ -8,6 +8,9 @@ import os
 from six.moves import input
 import threading
 from azure.iot.device import IoTHubDeviceClient
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 # The connection string for a device should never be stored in code. For the sake of simplicity we're using an environment variable here.
 conn_str = os.getenv("IOTHUB_DEVICE_CONNECTION_STRING")
